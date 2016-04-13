@@ -1,0 +1,14 @@
+도커 공부용 페이지 입니다.
+
+실행방법
+
+# spring boot 실행
+cd app
+docker build -t=<<username>>:app .
+docker run --name app -d -p 8080:8080 <<username>>:app
+cd ..
+
+# nginx 실행
+cd nginx
+docker build -t=<<username>>:nginx .
+docker run -p 80:80 -p 443:443 -d --name nginx --link app:app <<username>>/nginx
