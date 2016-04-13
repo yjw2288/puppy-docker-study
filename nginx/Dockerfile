@@ -22,6 +22,12 @@ VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/v
 # Define working directory.
 WORKDIR /etc/nginx
 
+COPY app.conf /etc/nginx/conf.d/app.conf
+
+
+RUN rm /etc/nginx/sites-enabled/default
+RUN rm /etc/nginx/sites-available/default
+
 # Define default command.
 CMD ["nginx"]
 

@@ -9,8 +9,8 @@ cd ..
 
 # spring boot 실행
 cd app
-docker build -t=yjw2288:app .
-docker run --name app -d -p 8080:8080 yjw2288:app
+docker build -t=yjw2288/app .
+docker run --name app -d -p 8080:8080 yjw2288/app
 cd ..
 
 # nginx 실행
