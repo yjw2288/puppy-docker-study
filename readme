@@ -2,13 +2,18 @@
 
 실행방법
 
+# ubunu 이미지 빌드
+cd ubuntu
+docker build -t=yjw2288/ubuntu .
+cd ..
+
 # spring boot 실행
 cd app
-docker build -t=<<username>>:app .
-docker run --name app -d -p 8080:8080 <<username>>:app
+docker build -t=yjw2288:app .
+docker run --name app -d -p 8080:8080 yjw2288:app
 cd ..
 
 # nginx 실행
 cd nginx
 docker build -t=<<username>>:nginx .
-docker run -p 80:80 -p 443:443 -d --name nginx --link app:app <<username>>/nginx
+docker run -p 80:80 -p 443:443 -d --name nginx --link app:app yjw2288/nginx
