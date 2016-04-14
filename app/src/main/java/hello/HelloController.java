@@ -22,4 +22,9 @@ public class HelloController {
     public String random() {
         return "random : " + RANDOM;
     }
+
+    @RequestMapping("/run")
+    public String run() {
+        return "run";
+    }
 }
