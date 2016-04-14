@@ -1,0 +1,13 @@
+nginx:
+    image: yjw2288/nginx
+    ports:
+        - "80:80"
+    links:
+        - appa:app
+        - appb:app2
+
+appa:
+    image: yjw2288/app
+
+appb:
+    image: yjw2288/app
