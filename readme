@@ -15,5 +15,5 @@ cd ..
 
 # nginx 실행
 cd nginx
-docker build -t=<<username>>:nginx .
+docker build -t=yjw2288:nginx .
 docker run -p 80:80 -p 443:443 -d --name nginx --link app:app yjw2288/nginx
