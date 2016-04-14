@@ -33,8 +33,19 @@ dependencies {
     // end::jetty[]
     // tag::actuator[]
     compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile(
+            "org.projectlombok:lombok:1.16.6",
+            'com.google.guava:guava:11.0.2'
+    )
+
+    compile (
+            "org.springframework.boot:spring-boot-starter-data-jpa",
+            "mysql:mysql-connector-java:5.1.31"
+    )
+
     // end::actuator[]
     testCompile("junit:junit")
+
 }
 
 task wrapper(type: Wrapper) {
