@@ -5,7 +5,7 @@ nginx:
     links:
         - appa:app
         - appb:app2
-        - appc:app3
+#        - appc:app3
 
 appa:
     image: yjw2288/app
@@ -13,5 +13,6 @@ appa:
 appb:
     image: yjw2288/app
 
-appc:
-    image: yjw2288/app
+#full db connection, just launch 2 tomcat
+#appc:
+#    image: yjw2288/app
