@@ -5,9 +5,13 @@ nginx:
     links:
         - appa:app
         - appb:app2
+        - appc:app3
 
 appa:
     image: yjw2288/app
 
 appb:
+    image: yjw2288/app
+
+appc:
     image: yjw2288/app
