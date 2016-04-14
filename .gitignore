@@ -1,6 +1,3 @@
-*.class
-app/.gradle/
-app/build/
 gradle-wrapper.jar
 gradle-wrapper.properties
 gradlew.bat
