@@ -27,5 +27,5 @@ ADD src /root/app/src
 WORKDIR /root/app
 RUN ./gradlew build
 
-CMD java -jar /root/app/build/libs/gs-spring-boot-0.1.0.jar > log
+CMD java -jar /root/app/build/libs/gs-spring-boot-0.1.0.jar
 EXPOSE 8080
