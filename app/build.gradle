@@ -44,6 +44,10 @@ dependencies {
             "com.zaxxer:HikariCP:2.4.5"
     )
 
+    compile(
+            'org.springframework.data:spring-data-redis',
+            'redis.clients:jedis',
+    )
     // end::actuator[]
     testCompile("junit:junit")
 
