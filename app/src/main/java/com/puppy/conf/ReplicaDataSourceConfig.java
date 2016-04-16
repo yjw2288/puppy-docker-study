@@ -35,17 +35,15 @@ public class ReplicaDataSourceConfig {
 
 	@Bean(destroyMethod = "close")
 	public DataSource readDataSource() {
-		final HikariDataSource ds = new HikariDataSource();
-		ds.setMaximumPoolSize(poolSize);
-		ds.setDriverClassName(driverClassName);
-		ds.setJdbcUrl(jdbcReadUrl);
-		ds.setUsername(userName);
-		ds.setPassword(password);
-		return ds;
+		return getDataSource(poolSize, driverClassName, jdbcReadUrl, userName, password);
 	}
 
 	@Bean(destroyMethod = "close")
 	public DataSource writeDataSource() {
+		return getDataSource(poolSize, driverClassName, jdbcWriteUrl, userName, password);
+	}
+
+	private DataSource getDataSource(int poolSize, String driverClassName, String jdbcWriteUrl, String userName, String password) {
 		final HikariDataSource ds = new HikariDataSource();
 		ds.setMaximumPoolSize(poolSize);
 		ds.setDriverClassName(driverClassName);
