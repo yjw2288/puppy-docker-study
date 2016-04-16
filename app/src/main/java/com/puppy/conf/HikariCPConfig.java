@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
-@Configuration
+//@Configuration
 public class HikariCPConfig {
 	@Value("${hikari.driverclassname}")
 	private String driverClassName;
